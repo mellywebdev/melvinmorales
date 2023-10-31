@@ -1,0 +1,159 @@
+body{
+    background-image: url('shoga.jpg');
+    background-size: contain;
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+    height: 100vh;
+    background-position: center;
+
+    
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: url(shoga.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: contain;
+        background-image: url(shogi.jpg);
+    }
+}
+
+
+.logo img {
+    max-width: 159px;
+    width: auto; 
+    height: auto; 
+    margin-right: 0; 
+    margin-left: 10px; 
+}
+
+.navbar {
+    color: #315191; 
+    padding: 20px;
+    position: absolute;
+    top: 23px;
+    right: 0;
+    font-family: 'Sedgwick Ave', cursive;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right; 
+}
+
+.navbar li {
+    display: inline; 
+    margin-left: 20px; 
+}
+
+.navbar a {
+    text-decoration: none; 
+    color: #315191; 
+   
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: #315191;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    color: #1e49be;
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+.content .job-title {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    color: #d78d8d;
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+.content .job-description {
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    color: #d7d6d6;
+    text-align: center;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        text-align: center;
+    }
+
+    .navbar.active ul {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active div:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .logo img {
+        max-width: 80px;
+    }
+
+    .navbar {
+        font-size: 18px;
+        top: 5px;
+        right: 5px;
+    }
+
+    .content {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .content h1 {
+        font-size: 24px;
+    }
+
+    .content .job-title {
+        font-size: 20px;
+    }
+
+    .content .job-description {
+        font-size: 16px;
+    }
+}
